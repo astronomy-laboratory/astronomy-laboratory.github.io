@@ -7,6 +7,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+        <!-- <script type="text/javascript">
+            function resizeIframe(obj){
+               obj.style.height = 0;
+               obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            }
+        </script> -->
+
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -18,7 +26,7 @@
 
                     <!-- Logo -->
                         <a href="index.html" class="logo">
-                            <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">AstroLab</span>
+                            <span class="symbol"><img src="images/astrolab-small.svg" alt="" /></span><span class="title">AstroLab</span>
                         </a>
 
                     <!-- Nav -->
@@ -49,22 +57,76 @@
                 <div class="inner">
                     <h1>Projects and Collaborations</h1>
 
-                    <!-- Text -->
                     <section>
                         <h2>Collaborations</h2>
-                        Our team members work directly with with European and Notrh American institutions. Among them the Max-Planck-Institut für Radioastronomie (<b>MPIfR</b>) and the Canadian Hydrogen Intensity Mapping Experiment and its Fast Radio Burst backend (<b>CHIME/FRB</b>).
+                        Our team members work directly with with Chilean, European and North American institutions. Among them the Max-Planck-Institut für Radioastronomie (<a href="https://www.mpifr-bonn.mpg.de"><b>MPIfR</b></a>), the European Southern Observatory (<a href="https://www.eso.org/public/chile/"><b>ESO</b></a>), and the Canadian hydrogen intensity mapping experiment (CHIME) and its fast radio burst (FRB) backend (<a href="https://www.chime-frb.ca"><b>CHIME/FRB</b></a>).
+                        We are also part of the Millimitre Wave Lab (<a href="http://www.das.uchile.cl/lab_mwl/"><b>MWL</b></a>) at Universidad de Chile, collaborating in the astronomical radio transient experiment (<a href="http://www.das.uchile.cl/lab_mwl/publicaciones/Conferences/Poster_Fran_workshop_antennas_and_microwaves_en_ingles.pdf">ARTE</a>) and other future projects.
                         
+                        In collaboration with MPIfR we work in a variety of problems, from holography for radio telescopes (<a href="http://www.apex-telescope.org/ns/">APEX</a> and Effelsberg at mm/sub-mm and cm-long wavelengths) to observations of radio transient signals with the <a href="https://www.mpifr-bonn.mpg.de/en/effelsberg">Effelsberg</a> telescope. 
+
+                        Within the CHIME/FRB Collaboration we are actively developing tools for the CHIME/FRB outriggers project. Outriggers are single dish CHIME-like cylinders spread all across North America in order to observe and localize (finding ther galactic host) FRBs. Multiple telescopes are necessary with a very long baseline in order to precisely pinpoint the FRB sky location (which is fundamental for the emission mechanism and use as probes of cosmology). 
+
+                        Lastly, our team closely collaborates with the <a href="https://web.oapd.inaf.it/zampieri/aqueye-iqueye/index.html">Italian quantum eye (Iqueye)</a> a fast photon counter capable of time tagging photons with ~0.5 ns precision. With this instrument we study the signal of pulsar and in the future transient-like events.
+                    </section>
+                </div>
+
+                <div class="inner">
+                    <section>
                         <hr />
+                        <h2>Canadian-Chilean array for radio transient studies (CHARTS)</h2>
 
-                        <h2>Projects</h2>
-                        The team is highly interested in the rapid variability of the transient sky. Our aim is to build radio components and even a small scale radio facility to constantly monitor and actively search for the mysterious FRB chromatic radiation. More on this soon ...
+                        Fast radio bursts are bright, millisecond-long flashes of coherent radio emission distributed throughout the sky and known to originate at extragalactic distances. FRBs have been theorised to study multiple astrophysical and cosmology problems. More than ~90% of FRB events are not known to repeat (Petroff et al. 2020), making their localization to their galactic host exceedingly difficult, and hampers their use as cosmological probes. Most FRBs have been detected in the 400--800 MHz band (CHIME/FRB Collaboration et al. 2021), with frequencies near 400 MHz generally appearing to be brighter, suggesting a unique opportunity for a survey at a lower frequency band that is relatively unexplored by existing instruments.
+                        We have proposed to build a first of its kind long wavelength radio interferometer in Chile, Chilean array for radio transient studies (CHARTS), working at a bandpass of 300--500 MHz with 64 dipole antennas (and expandable to 256 antennas) which combined offer a large effective area capable of detecting low dispersion measure (DM) FRBs (enabling nearby potential galactic host localization) with an expected rate of ~10 FRBs/year. CHARTS will implement a mix of commercial and in-house developed instruments to be built at Universidad de Chile in collaboration with University of Toronto and the MWL. Within the third year of operation of CHARTS we will be closing commissioning operations and having a 24/7 science operating, actively searching for the enigmatic FRBs. 
 
+                        CHARTS is in its initial stages and we are currently building the analog systems for it. We estimate the first deployment on 2025 and first light by the beginning of 2026.
+
+                    </section>
+                </div>     
+            </div>
+
+            <div div id="main">
+                <iframe class="inner" style="display: block; margin: auto;" width="600" height="400" src="plot/frb_rate.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" onload='resizeIframe(this)' allowfullscreen></iframe>
+            </div>   
+
+
+            <div id="main">
+                <div class="inner">
+                    <section>
                         <hr />
+                        <h2>Repeating FRBs analyses with 100-m Effelsberg telescope</h2>
 
-                        <h2>Latest Publications</h2>
+                        Repeating FRBs are millisecond duration chromatic flashes or radio emission with no defined progenitor, although some events are thought to come from a neutron star, their main mechanism remains a unknown. Our team is actively searching and studying activity windows of these obejects in order to characterize their astrophysical properties (and in the future perform follow-up observations). We closely collaborate with Dr. Cruces at the European Southern Observatory (Santiago, Chile).
+                    </section>
+
+                    <section>
+                        <hr />
+                        <h2>Radio instrumentation at the Atacama Pathfinder Experiment (APEX)</h2>
+
+                        Aperture antennas at high frecuencies need very high precision sufaces lower than observing walvength, ~microns. This is a very challenging task, since mechanical stress and deformation loads bend the elastic surface of the radio antenna. Unfortunately telescope observables are not directly related to the surface deformation, and such measurements are usually underdetermined. Phase retrieval methods such as holography are capable of obtaining but are limited in elevation and strong sources. Here we have implemented out-of-focus holography a method that is capable of measuring the surface deformation of the APEX telescope at any elevation and using strong astronomical sources. Our collaborators are Dr. Nicolás Reyes (MPIfR) and the APEX team.
+                    </section>
+    
+                    <section>
+                        <hr />
+                        <h2>Optical pulsar timing and optical fast transient searches</h2>
+
+                        Fast photon counters are photodiods capable of time tagging photons within ~1 ns precision (over 1 h of observation). The first observations with such instruments were done to study the first order intensity interferometry (Handbury Brown 1967), but now we are repurposing them to study transient and transient-like signals such as pulsars. Here we analyse pulsar pulses to better constrain their emission mechanims, and test our capabilities for radio transient fast counterpart detections. Our collaborators are Prof. Naletto (Università di Padova) and Dr. Zampieri (Istituto Nazionale di Astrofisica). 
+                        Our team has recently been approved to bring in the Iqueye fast photon counter to the Gemini South facility. Our plans are to test and commission this instrument starting by the end of 2024 and actively perform observations with it by 2025.
                     </section>
                 </div>
             </div>
+
+            <div id="main">
+                <div class="inner">
+                    <section>
+                        <hr/>
+                        <h2>Latest Publications</h2>
+
+                        To be updated soon ...
+
+                    </section>
+                </div>
+            </div>
+            
 
             <!-- Footer -->
             <footer id="footer">
@@ -79,9 +141,9 @@
                         <header>
                             <h2>Address</h2>
                         </header>
-                        <p>Departamento Ingeniería Eléctrica, Universidad de Chile, Av. Tupper 2007, Santiago 8370451, Chile.</p>
+                        <p><a href="https://www.die.cl">Departamento Ingeniería Eléctrica</a>, Universidad de Chile. Av. Tupper 2007, Santiago 8370451, Chile.</p>
 
-                        <p>Departamento Astronomía, Universidad de Chile, Santiago de Chile, Chile</p>			
+                        <p><a href="https://das.uchile.cl">Departamento Astronomía</a>, Universidad de Chile. Camino El Observatorio 1515, Las Condes, Santiago, Chile</p>			
                     </section>
                     <section>
                         <h2>Follow</h2>
