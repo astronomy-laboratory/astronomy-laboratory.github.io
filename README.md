@@ -1,7 +1,7 @@
 
 # AstroLab website
 
-This is the repository for the [astronomy-laboratory public website](http://astrnomy-laboratory.github.io).
+This is the repository for the [astronomy-laboratory public website](https://astronomy-laboratory.github.io).
 
 ## How to contribute (AstroLab members only)
 
