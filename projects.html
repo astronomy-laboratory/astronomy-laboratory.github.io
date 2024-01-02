@@ -17,6 +17,7 @@
         
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -78,20 +79,43 @@
                         <h2>Canadian-Chilean array for radio transient studies (CHARTS)</h2>
 
                         Fast radio bursts are bright, millisecond-long flashes of coherent radio emission distributed throughout the sky and known to originate at extragalactic distances. FRBs have been theorised to study multiple astrophysical and cosmology problems. More than ~90% of FRB events are not known to repeat (Petroff et al. 2020), making their localization to their galactic host exceedingly difficult, and hampers their use as cosmological probes. Most FRBs have been detected in the 400--800 MHz band (CHIME/FRB Collaboration et al. 2021), with frequencies near 400 MHz generally appearing to be brighter, suggesting a unique opportunity for a survey at a lower frequency band that is relatively unexplored by existing instruments.
-                        We have proposed to build a first of its kind long wavelength radio interferometer in Chile, Chilean array for radio transient studies (CHARTS), working at a bandpass of 300--500 MHz with 64 dipole antennas (and expandable to 256 antennas) which combined offer a large effective area capable of detecting low dispersion measure (DM) FRBs (enabling nearby potential galactic host localization) with an expected rate of ~10 FRBs/year. CHARTS will implement a mix of commercial and in-house developed instruments to be built at Universidad de Chile in collaboration with University of Toronto and the MWL. Within the third year of operation of CHARTS we will be closing commissioning operations and having a 24/7 science operating, actively searching for the enigmatic FRBs. 
+                        We have proposed to build a first of its kind long wavelength radio interferometer in Chile, Chilean array for radio transient studies (CHARTS), working at a bandpass of 300--500 MHz with 64 dipole antennas (and expandable to 256 antennas) which combined offer a large effective area capable of detecting low dispersion measure (DM) FRBs (enabling nearby potential galactic host localization) with an expected rate of ~10 FRBs/year. CHARTS will implement a mix of commercial and in-house developed instruments to be built at Universidad de Chile in collaboration with University of Toronto (Dunlap Institute) and the MWL. Within the third year of operation of CHARTS we will be closing commissioning operations and having a 24/7 science operating, actively searching for the enigmatic FRBs. 
 
-                        CHARTS is in its initial stages and we are currently building the analog systems for it. We estimate the first deployment on 2025 and first light by the beginning of 2026.
+                        <strong>CHARTS has been granted $180000 USD by Agencia Nacional de Investigación y Desarrollo (ANID; QUIMAL fund)</strong>, December 2023. This year CHARTS will develop analog components (frequency division multiplexers and logarithmic single polarization dipole antennas), purchase digital system and start testing them at Universidad de Chile.
 
+                        We estimate a full deployment on site at the end of 2025 and first light by the beginning of 2026.
                     </section>
-                </div>     
-            </div>
+                </div>
 
-            <div div id="main">
                 <iframe class="inner" style="display: block; margin: auto;" width="600" height="400" src="plot/frb_rate.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" onload='resizeIframe(this)' allowfullscreen></iframe>
-            </div>   
 
+                <div class="inner">
+                    <section>
+                        Porposed site for CHARTS: Laguna Carén (park), Región Metropolitana, Chile.
+                        <div id="Map" style="height:250px"></div>
+                        <script src="OpenLayers.js"></script>
+                        <script>
+                            var lat            = -33.42107829;
+                            var lon            = -70.86380446;
+                            var zoom           = 13;
+                        
+                            var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+                            var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+                            var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+                        
+                            map = new OpenLayers.Map("Map");
+                            var mapnik         = new OpenLayers.Layer.OSM();
+                            map.addLayer(mapnik);
+                        
+                            var markers = new OpenLayers.Layer.Markers("Markers");
+                            map.addLayer(markers);
+                            markers.addMarker(new OpenLayers.Marker(position));
+                        
+                            map.setCenter(position, zoom);
+                        </script>
+                    </section>
+                </div>
 
-            <div id="main">
                 <div class="inner">
                     <section>
                         <hr />
@@ -115,13 +139,7 @@
                         Our team has recently been approved to bring in the Iqueye fast photon counter to the Gemini South facility. Our plans are to test and commission this instrument starting by the end of 2024 and actively perform observations with it by 2025.
                     </section> -->
                 </div>
-            </div>
 
-            <!-- <div div id="main">
-                <iframe class="inner" style="display: block; margin: auto;" width="600" height="400" src="plot/folding.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" onload='resizeIframe(this)' allowfullscreen></iframe>
-            </div>    -->
-
-            <div id="main">
                 <div class="inner">
                     <section>
                         <hr/>
@@ -133,7 +151,6 @@
                 </div>
             </div>
             
-
             <!-- Footer -->
             <footer id="footer">
                 <div class="inner">
