@@ -17,9 +17,12 @@
         
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-                
+        
+        <!-- OpenStreetMap -->
+        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+
 	</head>
-	<body class="is-preload" onload="init();">
+	<body class="is-preload">
 		<!-- Wrapper -->
 		<div id="wrapper">
 
@@ -106,9 +109,8 @@
                               map.setCenter(new OpenLayers.LonLat(-70.86380446,-33.42107829).transform(epsg4326,projectTo), 12);
                             }
                         </script> -->
-
+                         
                         <div id="Map" style="height:250px"></div>
-                        <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
                         <script>
                             var lat            = -33.42107829;
                             var lon            = -70.86380446;
@@ -128,6 +130,7 @@
                         
                             map.setCenter(position, zoom);
                         </script>
+
                     </section>
                 </div>
 
