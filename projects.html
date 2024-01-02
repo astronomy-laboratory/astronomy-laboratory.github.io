@@ -17,7 +17,7 @@
         
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        
+                
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -79,9 +79,9 @@
                         <h2>Canadian-Chilean array for radio transient studies (CHARTS)</h2>
 
                         Fast radio bursts are bright, millisecond-long flashes of coherent radio emission distributed throughout the sky and known to originate at extragalactic distances. FRBs have been theorised to study multiple astrophysical and cosmology problems. More than ~90% of FRB events are not known to repeat (Petroff et al. 2020), making their localization to their galactic host exceedingly difficult, and hampers their use as cosmological probes. Most FRBs have been detected in the 400--800 MHz band (CHIME/FRB Collaboration et al. 2021), with frequencies near 400 MHz generally appearing to be brighter, suggesting a unique opportunity for a survey at a lower frequency band that is relatively unexplored by existing instruments.
-                        We have proposed to build a first of its kind long wavelength radio interferometer in Chile, Chilean array for radio transient studies (CHARTS), working at a bandpass of 300--500 MHz with 64 dipole antennas (and expandable to 256 antennas) which combined offer a large effective area capable of detecting low dispersion measure (DM) FRBs (enabling nearby potential galactic host localization) with an expected rate of ~10 FRBs/year. CHARTS will implement a mix of commercial and in-house developed instruments to be built at Universidad de Chile in collaboration with University of Toronto (Dunlap Institute) and the MWL. Within the third year of operation of CHARTS we will be closing commissioning operations and having a 24/7 science operating, actively searching for the enigmatic FRBs. 
+                        We have proposed to build a first of its kind long wavelength radio interferometer in Chile, Canadian-Chilean array for radio transient studies (CHARTS), working at a bandpass of 300--500 MHz with 64 dipole antennas (and expandable to 256 antennas) which combined offer a large effective area capable of detecting low dispersion measure (DM) FRBs (enabling nearby potential galactic host localization) with an expected rate of ~10 FRBs/year. CHARTS will implement a mix of commercial and in-house developed instruments to be built at Universidad de Chile in collaboration with University of Toronto (Dunlap Institute) and the MWL. Within the third year of operation of CHARTS we will be closing commissioning operations and having a 24/7 science operating, actively searching for the enigmatic FRBs events. 
 
-                        <strong>CHARTS has been granted $180000 USD by Agencia Nacional de Investigación y Desarrollo (ANID; QUIMAL fund)</strong>, December 2023. This year CHARTS will develop analog components (frequency division multiplexers and logarithmic single polarization dipole antennas), purchase digital system and start testing them at Universidad de Chile.
+                        <strong>CHARTS has recently been granted $180000 USD by Agencia Nacional de Investigación y Desarrollo (ANID; QUIMAL fund)</strong>, December 2023. This year CHARTS will develop analog components (frequency division multiplexers and logarithmic single polarization dipole antennas), purchase digital system and start testing them at Universidad de Chile.
 
                         We estimate a full deployment on site at the end of 2025 and first light by the beginning of 2026.
                     </section>
@@ -92,8 +92,23 @@
                 <div class="inner">
                     <section>
                         Porposed site for CHARTS: Laguna Carén (park), Región Metropolitana, Chile.
+                        <!-- <div id="basicMap" style="width:100%; height:100px"></div> -->
+                        <!-- <script>
+                            function init() {
+                            
+                              map = new OpenLayers.Map("basicMap");
+                            
+                              var mapnik = new OpenLayers.Layer.OSM();
+                              var  epsg4326 =  new OpenLayers.Projection("EPSG:4326"); //WGS 1984 projection
+                              var projectTo = new OpenLayers.Projection("EPSG:900913"); //The map projection (Spherical Mercator)
+                            
+                              map.addLayer(mapnik);
+                              map.setCenter(new OpenLayers.LonLat(-70.86380446,-33.42107829).transform(epsg4326,projectTo), 12);
+                            }
+                        </script> -->
+
                         <div id="Map" style="height:250px"></div>
-                        <script src="OpenLayers.js"></script>
+                        <script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
                         <script>
                             var lat            = -33.42107829;
                             var lon            = -70.86380446;
@@ -131,14 +146,16 @@
                         Aperture antennas at high frecuencies need very high precision sufaces lower than observing walvength, ~microns. This is a very challenging task, since mechanical stress and deformation loads bend the elastic surface of the radio antenna. Unfortunately telescope observables are not directly related to the surface deformation, and such measurements are usually underdetermined. Phase retrieval methods such as holography are capable of obtaining but are limited in elevation and strong sources. Here we have implemented out-of-focus holography a method that is capable of measuring the surface deformation of the APEX telescope at any elevation and using strong astronomical sources. Our collaborators are Dr. Nicolás Reyes (MPIfR) and the APEX team.
                     </section>
     
-                    <!-- <section>
+                    <section>
                         <hr />
                         <h2>Optical pulsar timing and optical fast transient searches</h2>
 
-                        Fast photon counters are photodiods capable of time tagging photons within ~1 ns precision (over 1 h of observation). The first observations with such instruments were done to study the first order intensity interferometry (Handbury Brown 1967), but now we are repurposing them to study transient and transient-like signals such as pulsars. Here we analyse pulsar pulses to better constrain their emission mechanims, and test our capabilities for radio transient fast counterpart detections. Our collaborators are Prof. Naletto (Università di Padova) and Dr. Zampieri (Istituto Nazionale di Astrofisica). 
-                        Our team has recently been approved to bring in the Iqueye fast photon counter to the Gemini South facility. Our plans are to test and commission this instrument starting by the end of 2024 and actively perform observations with it by 2025.
-                    </section> -->
+                        Fast photon counters are photo-detectors (e.g., single-photon avanalche diods; SPADs) capable of time tagging photons within ~nanosecond precision (over 1 h of continuous observation). The first observations with such instruments were done to study the first order intensity interferometry (Handbury Brown 1967), but now we are repurposing them to study transient and transient-like signals such as pulsars. Here we analyse pulsar pulses to better constrain their emission mechanims, and test our capabilities for radio transient fast counterpart detections (theorized counterparts and afterglows). Our collaborators are Prof. Naletto (Università di Padova) and Dr. Zampieri (Istituto Nazionale di Astrofisica).
+                        Our team is actively reaching out to local optical facilities to to bring in the Iqueye fast photon counter to Chile. Our plans are to test and commission this instrument by the end of 2024 and perform observations with it by 2025.
+                    </section>
                 </div>
+
+                <iframe class="inner" style="display: block; margin: auto;" width="600" height="400" src="plot/folding.html" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" onload='resizeIframe(this)' allowfullscreen></iframe>
 
                 <div class="inner">
                     <section>
