@@ -19,7 +19,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         
         <!-- OpenStreetMap -->
-        <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+        <!-- <script src="http://www.openlayers.org/api/OpenLayers.js"></script> -->
 
 	</head>
 	<body class="is-preload">
@@ -94,45 +94,11 @@
 
                 <div class="inner">
                     <section>
-                        Porposed site for CHARTS: Laguna Carén (park), Región Metropolitana, Chile.
-                        <!-- <div id="basicMap" style="width:100%; height:100px"></div> -->
-                        <!-- <script>
-                            function init() {
-                            
-                              map = new OpenLayers.Map("basicMap");
-                            
-                              var mapnik = new OpenLayers.Layer.OSM();
-                              var  epsg4326 =  new OpenLayers.Projection("EPSG:4326"); //WGS 1984 projection
-                              var projectTo = new OpenLayers.Projection("EPSG:900913"); //The map projection (Spherical Mercator)
-                            
-                              map.addLayer(mapnik);
-                              map.setCenter(new OpenLayers.LonLat(-70.86380446,-33.42107829).transform(epsg4326,projectTo), 12);
-                            }
-                        </script> -->
-                         
-                        <div id="Map" style="height:250px"></div>
-                        <script>
-                            var lat            = -33.42107829;
-                            var lon            = -70.86380446;
-                            var zoom           = 12;
-                        
-                            var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-                            var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-                            var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
-                        
-                            map = new OpenLayers.Map("Map");
-                            var mapnik         = new OpenLayers.Layer.OSM();
-                            map.addLayer(mapnik);
-                        
-                            var markers = new OpenLayers.Layer.Markers("Markers");
-                            map.addLayer(markers);
-                            markers.addMarker(new OpenLayers.Marker(position));
-                        
-                            map.setCenter(position, zoom);
-                        </script>
-
+                        Porposed site for CHARTS: <a href="https://www.openstreetmap.org/?mlat=-33.4211&amp;mlon=-70.8638#map=14/-33.4211/-70.8638&amp;layers=N">Laguna Carén (park), Región Metropolitana, Chile</a>.
                     </section>
                 </div>
+
+                <iframe class="inner" style="display: block; margin: auto;" width="600" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-70.90292930603029%2C-33.45292756353726%2C-70.82465171813966%2C-33.389169567557765&amp;layer=mapnik&amp;marker=-33.421054418010364%2C-70.86379051208496" style="border: 1px solid black"></iframe>
 
                 <div class="inner">
                     <section>
