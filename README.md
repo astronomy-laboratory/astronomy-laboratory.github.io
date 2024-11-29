@@ -1,6 +1,8 @@
 
 # AstroLab website
 
+**Warning: This is only for AstroLab members.**
+
 This is the repository for the [astronomy-laboratory public website](https://astronomy-laboratory.github.io).
 
 ## How to contribute (AstroLab members only)
@@ -22,6 +24,6 @@ Once you are happy with your changes, you can commit them to the repository and 
 git add -u
 git push origin <your-branch-name>
 ```
-Then you can open a pull request on GitHub and ask for a review from one of the other AstroLab admin.
+Then you can open a pull request on GitHub and ask for a review from one of the other AstroLab admin. Every so often we will merge all changes and push them to the `main` branch, most of these changes will be tested out in the `dev` branch. Lastly if you cannot `git push` or `git clone` let sysadmin know and we will include you in the repository.
 
 The GitHub official documentation is [here](https://docs.github.com/en/pages).
